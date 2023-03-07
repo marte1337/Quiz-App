@@ -1,3 +1,9 @@
+@import "./global.css";
+@import "./components/button.css";
+@import "./components/card.css";
+@import "./components/header.css";
+@import "./components/navigation.css";
+
 :root {
   --gray1: lightgray;
 }
@@ -9,14 +15,27 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
     
     background-color: var(--gray1);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-align: center;
+    transition: 0.4s ease;
   }
 
-  header {
+.hidden {
+  display: none;
+}
+
+.dark-mode {
+    background-color: rgb(50, 51, 58);
+    color: white;
+}
+
+
+
+
+  .header {
     color: white;
     text-shadow: 2px 2px 30px whitesmoke;
     background-color: rgb(88, 43, 120);
@@ -29,12 +48,12 @@ body {
     box-shadow: 8px 4px 15px 1px rgba(0, 0, 0, 0.345);
   }
 
-  main {
+  .main {
     padding-top: 80px;
     padding-bottom: 50px;
   }
 
-  .navbar {
+  .nav-bar {
     background-color:rgb(88, 43, 120);
     list-style: none;
     display: flex;
@@ -53,11 +72,11 @@ body {
     box-shadow: 8px -4px 15px 1px rgba(0, 0, 0, 0.345);
   }
 
-  nav a {
+  .nav-bar__link {
     text-decoration: none;
   }
 
-  .question-card {
+  .card {
       background-color: #bba2d3;
       margin: 20px;
       border: solid gray 4px;
@@ -66,7 +85,7 @@ body {
       box-shadow: 8px 8px 15px 1px rgba(0, 0, 0, 0.345);
   }
 
-  .bookmark {
+  .card__bookmark {
     background-color: whitesmoke;
     border: 1px solid;
     border-radius: 100%;
@@ -76,7 +95,7 @@ body {
     right: 7px;
   }
 
-  .question {
+  .card__question {
     background-color: rgb(225, 219, 230);
     font-weight: 500;
     font-size: large;
@@ -87,7 +106,7 @@ body {
     box-shadow: 1px 1px 5px 2px rgba(128, 128, 128, 0.581);
   }
   
-  .answer {
+  .card__answer {
     background-color: rgb(244, 242, 245);
     font-weight: 500;
     font-size: large;
@@ -98,11 +117,11 @@ body {
     box-shadow: 1px 1px 4px 1px rgba(128, 128, 128, 0.332);
   }
   
-  .btn-box {
+  .card__btn-box {
     min-height: 170px;
   }
 
-  button {
+  .card__btn {
       border-radius: 100%;
       padding: 50px 10px;
       margin: 15px;
@@ -115,7 +134,7 @@ body {
       transition-duration: 0.2s; 
   }
 
-  button:hover {
+  .card__btn:hover {
     box-shadow: 10px 12px 16px 0 rgba(0, 0, 0, 0.325), 0 17px 50px 0 rgb(47, 218, 0);
     color:  rgb(47, 218, 0);
     text-shadow: 2px 1px 15px rgba(245, 245, 245, 0.344), 1px 1px 20px rgba(47, 218, 0, 0.692);
@@ -125,7 +144,7 @@ body {
     font-size: larger;
   }
 
-  button:active {
+  .card__btn:active {
     box-shadow: 10px 12px 16px 0 rgba(0, 0, 0, 0.325), 0 17px 50px 0 red;
     color:  red;
     text-shadow: 2px 1px 15px rgba(245, 245, 245, 0.344), 1px 1px 20px red;
@@ -136,7 +155,7 @@ body {
   }
 
 
-.tags ul {
+.card__tags ul {
     list-style: none;
     display: flex;
     justify-content: start;
@@ -144,7 +163,7 @@ body {
     flex-wrap: wrap;
 }
 
-.tags li {
+.card__tags li {
     background-color: lightgray;
     font-weight: 300;
     padding: 10px;
@@ -152,7 +171,7 @@ body {
 }
 
 
-.nav-active {
+.nav-bar__link--active {
     background-color: lightgrey;
     border-radius: 2px;
 }
@@ -169,7 +188,7 @@ body {
     flex-wrap: wrap;
 }
 
-.profile img {
+.profile__img {
     background-color: lightgray;
     width: 120px;
     height: 120px;
@@ -179,7 +198,7 @@ body {
     box-shadow: 1px 1px 4px 1px rgba(128, 128, 128, 0.332);
 }
 
-.profile h2, h4 {
+.profile__name {
     background-color: rgb(225, 219, 230);
     padding: 12px;
     margin: 15px 40px;
@@ -188,7 +207,7 @@ body {
     box-shadow: 1px 1px 4px 1px rgba(128, 128, 128, 0.332);
 }
 
-.about {
+.profile__about {
     background-color: rgb(225, 219, 230);
     padding: 0px 15px;
     margin: 15px 40px;
@@ -198,12 +217,12 @@ body {
     box-shadow: 1px 1px 4px 1px rgba(128, 128, 128, 0.332);
 }
 
-.counter {
+.profile__counter {
     margin: 0;
     padding: 0;
 }
 
-.counter ul {
+.profile__counter ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -211,7 +230,7 @@ body {
     flex-wrap: wrap;
 }
 
-.counter li {
+.profile__counter li {
     background-color: lightgray;
     font-weight: 300;
     padding: 10px;
