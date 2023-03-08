@@ -17,6 +17,20 @@
     transition: 0.4s ease;
 }
 
+.main {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+
+
+/* STATE: */
+
 .hidden {
     display: none;
 }
@@ -24,11 +38,4 @@
 .dark-mode {
     background-color: rgb(50, 51, 58);
     color: white;
-}
-
-
-
-.main {
-    padding-top: 80px;
-    padding-bottom: 50px;
 }

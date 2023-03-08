@@ -41,7 +41,7 @@
 
 /* DARK MODE SWITCH */
 
-.switch {
+.dark-mode-switch {
 	position: relative;
 	display: grid;
 	grid-template-columns: 230px 64px;
@@ -50,7 +50,7 @@
     margin-bottom: 30px;
 }
 
-.switch span {		    /* Der graue Untergrund des Schalters */ 
+.dark-mode-switch span {		    /* Der graue Untergrund des Schalters */ 
 	position: absolute;
 	background-color: #ccc;
 	border-radius: 17px;
@@ -62,7 +62,7 @@
 	transition: background-color .4s;
 }
 
-.switch span::before {    /* Der kreisrunde Button im Switch */ 
+.dark-mode-switch span::before {    /* Der kreisrunde Button im Switch */ 
 	background-color: white;
 	border-radius: 50%;
 	content: "";
@@ -81,17 +81,17 @@ input:checked + span {
     transform: translateX(30px);
   }
 
-  .switch input {
+  .dark-mode-switch input {
 	display: none;
 }
 
-.switch span {
+.dark-mode-switch span {
 	background-color: #ccc;
 	transition: .4s;
 	grid-area: switch;
 }
 
-.switch p { 
+.dark-mode-switch p { 
     font-weight: 600;
 	margin-top: 7px;
 }
